@@ -4,11 +4,13 @@ In this project,pre trained hugging face transformer models have been evaluated 
 
 Imbalance techniques used:Weighted Random Sampler compared with Class weight being called in bcewithlogitloss() and crossentropy()
 
-Datasets:YELP Restaurant reviews taken from stonybrook,Open Science Framework Reveiws generated from Amazon products,Deception Opinion Spam Corpus dataset related to chicago hotels.
+Datasets:YELP Restaurant reviews taken from stonybrook (imbalance dataset),Open Science Framework Reveiws generated from Amazon products (balanced dataset),Deception Opinion Spam Corpus dataset related to chicago hotels (balanced dataset).
 
 Models are evaluated using F1,Accuracy, and (Mathew Correlation Coefficient,Precision recall curve used for imbalance yelp dataset)
 
-Performance tuning techniques:Autocast gradscaler,gradient accumulations,data loader using pytorch,pin memory.
+Performance tuning is required for Yelp performance python code as the dataset is huge.The listed below are applied only to yelp performance python code.
+
+Performance tuning methods used:Autocast gradscaler,gradient accumulations,data loader using pytorch,pin memory.
 
 To understand the application of automatic precision scaling and its benefits,below is the link,
 https://docs.nvidia.com/deeplearning/performance/mixed-precision-training/index.html
